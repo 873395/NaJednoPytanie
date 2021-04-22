@@ -1,0 +1,282 @@
+*{margin: 0px;}
+@font-face {
+    font-family:Roboto-Black ;
+    src: url(Roboto-Black.ttf);
+}
+@font-face {
+    font-family:Roboto-Italic ;
+    src: url(Roboto-Italic.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Bold;
+    src: url(Roboto-Bold.ttf);
+}
+button:focus
+{
+    outline: none;
+}
+header
+{
+    text-align: center;
+    border: 3px solid black;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.nav
+{
+    width: 20%;
+    border: 2px solid black;
+    float: left;
+}
+#content
+{
+    width: 75%;
+    border-radius: 30px 0px 0px 30px;
+    float: right;
+    text-align: center;
+    padding: 10px;
+}
+
+#nmrPytania
+{
+    background-color: #464646;
+    border-radius: 0px 0px 20px 20px;
+    padding: 10px;
+    padding-left: 5%;
+    text-align: left;
+    font-size: 12px;
+}
+
+#TrescPytania
+{
+    letter-spacing: 1px;
+    margin: 10px;
+    font-style:initial;
+    font-variant: normal;
+    font-size: 20px;
+    font-family: roboto-black;
+    letter-spacing: 2px;
+}
+
+#guziki
+{
+    padding-top: 15px;
+}
+
+#odpowiedzi
+{
+    padding: 5px;
+}
+
+.odpowiedzNMR
+{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    float: inline-end;
+    font-family: roboto-bold;
+    letter-spacing: 1px;
+}
+
+.buttony
+{
+    width: 50%;
+    border: 2px solid #ff5252;
+    margin: 5px;
+}
+
+.klikacze
+{
+    color: white;
+    width: 30%;
+    height: 20px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    background-color: #4b4b4b;
+    border-radius: 30px;
+    border: 2px solid gray;
+    border-bottom: 2px solid #EE5A24;
+    cursor: pointer;
+}
+
+.klikacze:hover
+{
+    border-bottom: 2px solid #FFC312 ;
+    animation: zakrywacz 1s ease-in-out;
+    animation-play-state: running;
+}
+
+@keyframes zakrywacz{
+    0%{}
+    50%{border-top: 2px solid orange;
+        border-left: 2px solid orange;
+        border-right: 2px solid orange;
+    box-shadow: 0px 0px 10px orange;
+    }
+    100%{}
+}
+.klikacze:focus
+{
+    outline: none;
+}
+
+#znacznik
+{
+    background-color: #464646;
+    border: 0px solid yellow;
+    border-radius: 20px;
+    margin: 5px;
+    padding-left: 20px;
+    text-align: center;
+    
+}
+
+body
+{
+    background-color: #202020;
+    color: white;
+    cursor: default;
+    width:1fr;
+    height: 1fr;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.glownyKolor
+{
+    background-color: #333333;
+}
+
+.lewyPanel
+{
+    background-color:#363636;
+    border-radius: 0px 0px 30px 30px;
+    text-align: center;
+    padding: 2px;
+}
+
+#listaPytan
+{
+    text-align: center;
+    margin-top: 5%;
+    padding:1%;
+    width: 90%;
+    border-radius: 20px;
+    float: right;
+    background-color: #333333;
+}
+
+#nagloekListyPytan
+{
+    padding:1%;
+    border-radius: 30px;
+    background-color: #464646;
+}
+
+#rozsunListe
+{
+    margin: 1%;
+    width: 45%;
+    padding: 0.5%;
+    background-color: #ff5252;
+    border: 2px solid #ff5252;
+    border-radius: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+#rozsunListe:hover
+{
+background-color: #b33939;}
+
+.listaPytan
+{
+    margin-top: 1.5%;
+    margin-right: 2px;
+    width: 100%;
+    border-radius: 10px;
+    border-top: 1.5px solid #ff793f;
+    border-left: 1.5px solid #ff793f;
+    text-align: left;
+    padding:5px ;
+    padding-left: 2%;
+}
+
+.pasekStanu
+{
+    padding-bottom: 0.5%;
+    background-color: #ff793f;
+    margin-bottom: 1%;
+    text-align: center;
+}
+
+.opcjaMenu
+{
+    
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    float: left;
+    border:2px solid #ff793f;
+    background-color: #ff793f;
+    color: white;
+}
+
+.opcjaMenu:hover
+{
+    background-color:#cd6133 ;
+    cursor: pointer;
+}
+
+.nav
+{
+    float: left;
+    width: 20%;
+    text-align: center;
+    border-radius: 10px;
+    background-color:#333333 ;
+    font-size: 15px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#zakrywacz
+{
+    width: 100%;
+    position: relative; 
+}
+
+img
+{
+    max-width: 20%;
+    max-height: 20%;
+}
+
+#menuLewe
+{
+    border: 2px solid red;
+    height: 100%;
+}
+
+.paski
+{
+    background-color: #222222;
+    border-radius: 20px 20px 0px 0px;
+    padding: 2px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.paskiWSrodku
+{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+Z6DQC-E4TCW-2REU4-APGQR
+
+
+
+
+

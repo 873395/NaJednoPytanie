@@ -1,0 +1,93 @@
+*{margin: 0px;}
+@font-face {
+    font-family:Roboto-Black ;
+    src: url(Roboto-Black.ttf);
+}
+@font-face {
+    font-family:Roboto-Italic ;
+    src: url(Roboto-Italic.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Bold;
+    src: url(Roboto-Bold.ttf);
+}
+.sterowanieIloscia
+{
+
+    width: 20%;
+    height: 100%;
+    border-radius: 8px;
+    background-color: #585858;
+    color: white;
+    border:1px solid red;
+}
+.sterowanieIloscia2
+{
+
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background-color: #585858;
+    color: white;
+    border:1px solid red;
+}
+.sterowanieIloscia:hover
+{
+    border: 1px solid orange;
+}
+.sterowanieIloscia2:hover
+{
+    border: 1px solid orange;
+}
+
+.glownyDiv
+{
+    border: 0.1px solid orange;
+    background-color: #4b4a4a;
+    border-radius: 20px;
+    margin-top: 5%;
+    padding: 1%;
+}
+.odpowiedzi
+{
+    margin-top: 1%;
+    padding: 1%;
+    padding-left: 2%;
+    border-left: 0.5px solid orange;
+    border-bottom: 0.5px solid orange;
+    background-color:#585858 ;
+    border-radius: 100px;
+    text-align: left;
+}
+
+.odpowiedzi:hover
+{
+    border-left: 0.5px solid orangered;
+    border-bottom: 0.5px solid orangered;
+}
+
+.pytanie
+{
+    font-family: Roboto-Black;
+    font-weight: 1000;
+    font-size: 20px;
+    border: 0px solid green;
+    padding:30px;
+    background-color: #3d3d3d;
+    border-radius: 10px;
+}
+
+.idPytania
+{
+    padding: 1%;
+    text-align: left;
+    font-size: 10px;
+}
+
+#output 
+{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding: 10px;
+}
