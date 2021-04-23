@@ -1,6 +1,7 @@
 let iloscDivow=0;
 let iloscOdpowiedzi=3;
 let numerPytania=1;
+let numerDoPytan=new Array();
 function liczbaPytan(numer) //sprawdzanie panelu po lewej
 {
  if(numer==1){iloscDivow=iloscDivow+1};
@@ -39,40 +40,31 @@ if(iloscDivow<0){iloscDivow=iloscDivow*-1};
 }
 
 
-function losowaniePytan()
-{
-    let pierwsza=[];
-    for(let i=0;i<10;i++)
-    {
-        let d=Math.floor(Math.random()*10);
-    pierwsza.push(d);
-    };
-
-    let druga=[];
-    for(let i=0;i<10;i++)
-    {
-        let d=Math.floor(Math.random()*10);
-    druga.push(d);
-    };
-    pierwsza.sort();
-    druga.sort();
-    druga.shift();
-    console.warn(pierwsza);
-    console.warn(druga);
-
-}
-
-
-
-
 function kreatorElementow() //tworzenie divów
 {
+    
+    console.warn(numerDoPytan);
+    let k=iloscDivow;
+    let n=pytania.length; 
+    var numbers = new Array(n);
+    for (var i=0; i<n; i++) {
+    numbers[i] = i + 1;
+    }  
+    for (var i=0; i<k; i++) {  
+    var r = Math.floor(Math.random()*n);
+    console.warn(numbers[r]);
+    numerDoPytan.push(numbers[r]);
+    numbers[r] = numbers[n - 1];
+    n--;
+    }
+    console.warn(numerDoPytan);
+
+
     numerPytania=1;
-    poleNaPytania.innerHTML='';
         for(let i=0;i<iloscDivow;i++)
     {   
         let glownyDiv=document.createElement('div');
-        glownyDiv.id=`pojemnik`;
+        glownyDiv.id=`pojemnik1`;
         glownyDiv.className='glownyDiv';
 
         let identyfikatorPytania=document.createElement('div');
@@ -83,16 +75,16 @@ function kreatorElementow() //tworzenie divów
 
         let trescPytania=document.createElement('div');
         trescPytania.id='trescPytania';
-        trescPytania.innerText='Tresc pytania';
+        trescPytania.innerHTML=pytania[numerDoPytan[i]][0];
         trescPytania.className='pytanie';
         glownyDiv.appendChild(trescPytania);
 
-        for(let a=0;a<iloscOdpowiedzi;a++)
+        for(let a=1;a<=iloscOdpowiedzi;a++)
         {
             let odpowiedzi=document.createElement('div');
             odpowiedzi.id=`odpowiedz${a}`;
             odpowiedzi.className='odpowiedzi';
-            odpowiedzi.innerText=`${a}`;
+            odpowiedzi.innerHTML=pytania[numerDoPytan[i]][a];
             glownyDiv.appendChild(odpowiedzi);
         }
         numerPytania++;
