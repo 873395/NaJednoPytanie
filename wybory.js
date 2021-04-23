@@ -23,10 +23,10 @@ function listaDoPytan()
            <br><br  > Prawidłowa odpowiedź: ${pytania[i][4]}
            `;
            numerPytania++;
+           rozsunienta=false;
         }
         
         rozsunListe.innerText="ZWIŃ LISTĘ";
-        rozsunienta=false;
     }
     
     console.warn(rozsunienta);
