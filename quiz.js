@@ -1,7 +1,7 @@
 let zdjecia=[
     '<br><img src="image/linux.png"></img>',
     '<br><img src="image/windows.png"></img>',
-    '<br><img src="image/MacOS.png"></img>',
+    '<br><img src="image/macOS.png"></img>',
     '<br><img src="image/prondy.png"></img>',
 ]
 
