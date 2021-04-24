@@ -3,6 +3,8 @@ let zdjecia=[
     '<br><img src="image/windows.png"></img>',
     '<br><img src="image/macOS.png"></img>',
     '<br><img src="image/prondy.png"></img>',
+    '<br><img src="image/tabela.jpg"></img>',
+    '<br><img src="image/karta1.jpg"></img>',
 ]
 
 let pytania=[
@@ -12,10 +14,18 @@ let pytania=[
     ["Ustawienie zworek na dyskach z interfejsem IDE odpowiada za"  ,"rodzaj interfejsu dyskowego","napięcie zasilania silnika","tryb pracy dysku","C"],
     ["Switch jako element centralny występuje w sieci o topologii"  ,"pierścienia","magistrali","gwiazdy","C"],
     ["W systemie operacyjnym Ubuntu do monitorowania w czasie rzeczywistym uruchomionych procesów i programów służy polecenie"  ,"top","ps","sysinfo","A"],
-    [`Jakiego systemu operacyjnego to logo ${zdjecia[0]} `,"Linux","Windows","MacOS","A"],
-    [`Jakiego systemu operacyjnego to logo ${zdjecia[1]} `,"Linux","MacOS","Windows","C"],
+    [`Jak ma na imię maskotka systemu operacyjnego Linux ? ${zdjecia[0]} `,"Kux","Tux","Lux","B"],
+    [`Jaki system operacyjny reprezentuje poniższe zdjęzie ? ${zdjecia[1]} `,"Linux","MacOS","Windows","C"],
     [`Jakiego systemu operacyjnego to logo ${zdjecia[2]} `,"Windows","MacOS","Linux","B"],
     [`Na urządzeniu zasilanym prądem stałym znajduje się przedstawione oznaczenie. Wynika z niego, że urządzenie pobiera moc około ${zdjecia[3]} `,"7,5 W","18,75 W","11 W","B"],
+    ["Zgodnie ze specyfikacją JEDEC typowe napięcie zasilania modułów niskonapięciowych pamięci RAM DDR3L wynosi","1.50 V","1.20 V","1.35 V","C"],
+    ["Wskaż właściwą kolejność operacji przygotowujących nowy laptop do pracy.","Włączenie laptopa, montaż baterii, instalacja systemu operacyjnego, podłączenie zewnętrznego zasilania sieciowego, wyłączenie laptopa po instalacji systemu operacyjnego","Montaż baterii, podłączenie zewnętrznego zasilania sieciowego, włączenie laptopa, instalacja systemu operacyjnego, wyłączenie laptopa po instalacji systemu operacyjnego","Podłączenie zewnętrznego zasilania sieciowego, włączenie laptopa, instalacja systemu operacyjnego, montaż baterii, wyłączenie laptopa po instalacji systemu operacyjnego","B"],
+    ["Do zasilacza UPS o mocy rzeczywistej 480 W nie należy podłączać","modemu ADSL","urządzeń sieciowych typu router","drukarki laserowej","C"],
+    ["Przerzutnik bistabilny przechowuje bit informacji w pamięci","DDR SDRAM","SRAM","DRAM","B"],
+    [`Z danych zestawionych w tabeli wynika, że częstotliwość efektywna pamięci DDR SDRAM wynosi ${zdjecia[4]}`,"200 MHz","266 MHz","400 MHz","C"],
+    ["Komponentem płyty głównej odpowiedzialnym za komunikację pomiędzy procesorem a pozostałymi elementami płyty jest","chipset","pamięć RAM","BIOS ROM","A"],
+    [`Na zdjęciu przedstawiono gniazda należące do karty ${zdjecia[5]}`,"telewizyjnej","faksmodemowej","sieciowej","C"],
+    ["Który z portów panelu tylnego płyty głównej jest oznaczany w dokumentacji jako port standardu RS232C?","PS/2","LPT","COM","C"],
 ];
     
 let prawidlowa;
