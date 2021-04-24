@@ -9,6 +9,10 @@ let moznoKlikalnoscPlus=true;
 let moznoKlikalnoscMinus=false;
 let nmrPojemnika;
 let nmrOdpowiedzi;
+let czasowa;
+let godzina;
+let minuta;
+let sekunda;
 let wyslaneOdpowiedzi=false;
 function liczbaPytan(numer) //sprawdzanie panelu po lewej
 {
@@ -60,6 +64,10 @@ function kreatorElementow() //tworzenie divów
     wyslaneOdpowiedzi=false;
     tablicaOdpowiedzi=[];
     odnosnikPytania=[];
+    let data= new Date();
+    godzina=data.getHours();
+    minuta=data.getMinutes();
+    sekunda=data.getSeconds();
     let k=iloscDivow;
     let n=pytania.length-1; 
     let numbers = new Array(n);
@@ -128,17 +136,30 @@ function klikalnik(nmrPojemnika,nmrOdpowiedzi)
     odp.style.borderBottom='3px solid orange';
         odp.style.borderLeft='3px solid orange';
     tablicaOdpowiedzi[nmrPojemnika]=nmrOdpowiedzi;
-    console.warn(tablicaOdpowiedzi);
 }
+
+
 function sprawdzanieOdpowiedzi()
 {
     wyslaneOdpowiedzi=true;
+    console.warn(numerDoPytan);
+    console.warn(odnosnikPytania);
+    console.warn(tablicaOdpowiedzi);
 
     for(let m=0;m<iloscDivow;m++)
     {
         if(tablicaOdpowiedzi[m]==0)continue;
         const dobra=document.getElementById(`odpowiedz${m}${tablicaOdpowiedzi[m]}`);
-            let A;
+            console.warn(tablicaOdpowiedzi);
+        let A;
+        let D;
+            if(pytania[odnosnikPytania[m]][4]=='A'){D=1};
+            if(pytania[odnosnikPytania[m]][4]=='B'){D=2};
+            if(pytania[odnosnikPytania[m]][4]=='C'){D=3};
+        const poprawna=document.getElementById(`odpowiedz${m}${D}`);
+        poprawna.style.borderLeft='4px solid green';
+        poprawna.style.borderRight='4px solid green';
+
              if(tablicaOdpowiedzi[m]==1){A='A'};
              if(tablicaOdpowiedzi[m]==2){A='B'};
              if(tablicaOdpowiedzi[m]==3){A='C'};
@@ -154,6 +175,11 @@ function sprawdzanieOdpowiedzi()
              }  
     }//koniec
     opcja2.innerHTML=`Zdobyłeś ${sumaPunktow} / ${iloscDivow}`;
+    let data2=new Date();
+    let godzina2=data2.getHours();
+    let minuta2=data2.getMinutes();
+    let sekunda2=data2.getSeconds();
+    czasowa=`rozwiązywałeś test ${godzina2-godzina}H ${minuta2-minuta}M ${sekunda2-sekunda}S`;
     sprawdz.remove();
     koncowyWynik();
 }
@@ -182,6 +208,8 @@ function koncowyWynik()
     napisPunkty.innerHTML=`zdobyłeś ${sumaPunktow} / ${iloscDivow} możliwych punktów
     <br>
     średni wynik: ${Math.floor(sumaPunktow/iloscDivow*100)} %
+    <br><br>
+    ${czasowa}
     `
     koncoweWyniki.appendChild(napisPunkty);
 
