@@ -159,15 +159,20 @@ function sprawdzanieOdpowiedzi()
 
 function koncowyWynik()
 {
+    let zakrywkar=document.createElement('div');
+    zakrywkar.id='blurownik';
+    zakrywkar.className='blur';
+    document.body.appendChild(zakrywkar);
+
     let ekran=document.createElement('div');
     ekran.id='koncoweWyniki';
     ekran.className='koncoweWyniki';
-    document.body.appendChild(ekran);
+    blurownik.appendChild(ekran);
 
     let napis=document.createElement('div');
     napis.id='glownyNapisElementu';
     napis.className='glowneNapisy';
-    napis.innerHTML='po wielkiej bitwie opadł kurz'
+    napis.innerHTML='kości zostały rzucone, "Alea iacta est"'
     koncoweWyniki.appendChild(napis);
 
     let napisPunkty=document.createElement('div');
@@ -191,6 +196,7 @@ function usuwajElementy()
     napisPunkty.remove();
     glownyNapisElementu.remove();
     koncoweWyniki.remove();
+    blurownik.remove();
 }
 
 

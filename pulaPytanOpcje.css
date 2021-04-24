@@ -132,6 +132,8 @@
     font-weight: 1000;
     text-align: center;
     padding: 10px;
+    opacity: 100%;
+    box-shadow: 0px 0px 3000px orange;
 }
 
 .glowneNapisy
@@ -139,10 +141,14 @@
     padding-top: 30px;
     font-size: 30px;
     font-family: Roboto-black;
+    opacity: 100%;
+
 }
 .dodatkoweNapisy
 {
     position: relative;
+    opacity: 100%;
+
 }
 .dodatkoweGuziki
 {
@@ -159,9 +165,22 @@
     width: 40px;
     height: 40px;
     font-weight: 1000;
+    opacity: 100%;
+
 }
 .dodatkoweGuziki:hover
 {
     border:5px  solid orangered;
     box-shadow: 0px 0px 5px orange;
+    opacity: 100%;
+}
+
+.blur
+{
+    position:sticky;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    bottom: 1%;
+    opacity: 80%;
 }
