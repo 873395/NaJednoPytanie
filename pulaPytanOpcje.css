@@ -12,6 +12,11 @@
     font-family: Roboto-Bold;
     src: url(Roboto-Bold.ttf);
 }
+img
+{
+    margin: 2%;
+}
+
 .sterowanieIloscia
 {
 
@@ -158,7 +163,6 @@
     color: white;
     align-items: center;
     justify-content: center;
-    display: inline-table;
     left: 46%;
     bottom: 43%;
     border-radius: 30px;

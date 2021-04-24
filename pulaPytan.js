@@ -74,6 +74,7 @@ function kreatorElementow() //tworzenie divów
 };
     poleNaPytania.innerHTML='';
     numerPytania=1;
+    sumaPunktow=0;
         for(let q=0;q<numerDoPytan.length;q++)
     {   
         tablicaOdpowiedzi.push(0);
@@ -142,14 +143,14 @@ function sprawdzanieOdpowiedzi()
              if(tablicaOdpowiedzi[m]==2){A='B'};
              if(tablicaOdpowiedzi[m]==3){A='C'};
              if(pytania[odnosnikPytania[m]][4]==A){
-                dobra.style.borderBottom='4px solid green';
-                dobra.style.borderLeft='4px solid green';
+                dobra.style.borderBottom='2px solid lime';
+                dobra.style.borderLeft='2px solid lime';
                 sumaPunktow++;
              }
              else
              {
-                dobra.style.borderBottom='4px solid red';
-                dobra.style.borderLeft='4px solid red';
+                dobra.style.borderBottom='2px solid red';
+                dobra.style.borderLeft='2px solid red';
              }  
     }//koniec
     opcja2.innerHTML=`Zdobyłeś ${sumaPunktow} / ${iloscDivow}`;
@@ -178,7 +179,10 @@ function koncowyWynik()
     let napisPunkty=document.createElement('div');
     napisPunkty.id='napisPunkty';
     napisPunkty.className='dodatkoweNapisy';
-    napisPunkty.innerHTML=`zdobyłeś ${sumaPunktow} / ${iloscDivow} możliwych punktów`
+    napisPunkty.innerHTML=`zdobyłeś ${sumaPunktow} / ${iloscDivow} możliwych punktów
+    <br>
+    średni wynik: ${Math.floor(sumaPunktow/iloscDivow*100)} %
+    `
     koncoweWyniki.appendChild(napisPunkty);
 
     let zamknij=document.createElement('button');
