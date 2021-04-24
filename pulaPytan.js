@@ -110,6 +110,7 @@ function kreatorElementow() //tworzenie divów
     let divSprawdzaj=document.createElement('div');
             divSprawdzaj.className='latajacyDiv';
             divSprawdzaj.innerHTML="sprawdź";
+            divSprawdzaj.id='sprawdz';
             divSprawdzaj.addEventListener('click',sprawdzanieOdpowiedzi);
             poleNaPytania.appendChild(divSprawdzaj);
 } //znacznik konca funkcji
@@ -152,6 +153,44 @@ function sprawdzanieOdpowiedzi()
              }  
     }//koniec
     opcja2.innerHTML=`Zdobyłeś ${sumaPunktow} / ${iloscDivow}`;
+    sprawdz.remove();
+    koncowyWynik();
+}
+
+function koncowyWynik()
+{
+    let ekran=document.createElement('div');
+    ekran.id='koncoweWyniki';
+    ekran.className='koncoweWyniki';
+    document.body.appendChild(ekran);
+
+    let napis=document.createElement('div');
+    napis.id='glownyNapisElementu';
+    napis.className='glowneNapisy';
+    napis.innerHTML='po wielkiej bitwie opadł kurz'
+    koncoweWyniki.appendChild(napis);
+
+    let napisPunkty=document.createElement('div');
+    napisPunkty.id='napisPunkty';
+    napisPunkty.className='dodatkoweNapisy';
+    napisPunkty.innerHTML=`zdobyłeś ${sumaPunktow} / ${iloscDivow} możliwych punktów`
+    koncoweWyniki.appendChild(napisPunkty);
+
+    let zamknij=document.createElement('button');
+    zamknij.className='dodatkoweGuziki';
+    zamknij.id='dodatkowyFuzik';
+    zamknij.innerHTML='X';
+    zamknij.addEventListener('click',usuwajElementy);
+    koncoweWyniki.appendChild(zamknij);
+
+}
+
+function usuwajElementy()
+{
+    dodatkowyFuzik.remove();
+    napisPunkty.remove();
+    glownyNapisElementu.remove();
+    koncoweWyniki.remove();
 }
 
 
