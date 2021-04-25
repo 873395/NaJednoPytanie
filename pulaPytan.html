@@ -15,36 +15,32 @@
 <body id="body">
     <div id="wrapper"></div>
     <header>quiz "na drugą nóżkę"</header>
-    <div id="pasekStanu1" class="pasekStanu" style="background-color: red;"></div>
+    <div id="pasekStanu1" class="pasekStanu">
+        <div class="boczneMenu" id="home" onclick="home()">HOME</div>
+        <div class="boczneMenu" id="jednoPytanie" onclick="window.open('index.html','_self')">Jedno pytanie</div>
+        <div class="boczneMenu" id="zresetuj" onclick="resetuj()">Zresetuj formularz</div>
+        <div class="boczneMenuStale" id="|">|</div>
+        <div onclick="liczbaPytan('1')" class="boczneMenu" id="g1" type="submit">+</div>
+        <div onclick="liczbaPytan('2')" class="boczneMenu" id="g2" type="submit">-</div>
+        <div onclick="liczbaPytan('3')" class="boczneMenu" id="g3" type="submit">+10</div>
+        <div onclick="liczbaPytan('4')" class="boczneMenu" id="g4" type="submit">-10</div>
+        <div onclick="liczbaPytan('5')" class="boczneMenu" id="g5" type="submit">RESET</div>
+        <div class="boczneMenuStale" id="output">Pytań: 1</div>
+        <div class="boczneMenu" onclick="kreatorElementow()">Losuj</div>
+    </div>
 
     <div id="pojemnik" class="glownyKolor">
         <div id="content" class="glownyKolor" style="min-height: 200px;">
             <div class="paski">
-                <dib id="opcja2" class="paskiWSrodku">Liczba punktów</dib>
-                <dib id="kolorek" class="paskiWSrodku">Średnia punktów</dib>
                 <dib id="zegarek" class="paskiWSrodku wrapper">Godzina</dib>
             </div>
             <div id="nmrPytania">
-                Wylosowałeś x pytań z puli y z tablicy
+                Powodzenia ;-)
             </div>
             <div id="poleNaPytania"></div>
         </div>
     </div>
-    <div id="nav3" class="nav">
-        <div id="boczneNaglowek" class="boczneMenuStale">menu</div>
-        <div class="boczneMenu" id="home" onclick="home()">HOME</div>
-        <div class="boczneMenu" id="jednoPytanie" onclick="window.open('index.html','_self')">Jedno pytanie</div>
-        <div class="boczneMenu" id="zresetuj" onclick="resetuj()">Zresetuj formularz</div>
-        <div class="boczneMenuStale" id="opcjeLosowania">Opcje losowania</div>
-        <div class="boczneMenuStale" id="suwak">
-            <button onclick="liczbaPytan('1')" class="sterowanieIloscia"  id="g1" type="submit">+</button>
-            <button onclick="liczbaPytan('2')" class="sterowanieIloscia"  id="g2" type="submit">-</button>
-            <button onclick="liczbaPytan('3')" class="sterowanieIloscia"  id="g3" type="submit">+10</button>
-            <button onclick="liczbaPytan('4')" class="sterowanieIloscia"  id="g4" type="submit">-10</button>
-            <button onclick="liczbaPytan('5')" class="sterowanieIloscia2" id="g5" type="submit">RESET</button>
-            <div id="output">Elementów: 1</div>
-        </div>
-        <div class="boczneMenu" id="Losuj" onclick="kreatorElementow()">Losuj</div>
+    
     </div>
     </div>
     </div>

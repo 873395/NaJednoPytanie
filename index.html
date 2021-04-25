@@ -18,8 +18,10 @@
 <body id="body">
     <header>quiz "na jedno pytanie"</header>
     <div id="pasekStanu1" class="pasekStanu">
-        
-    </div> 
+            <div id="boczneNaglowek" class="boczneMenu" onclick="rozsunDodanieDiva()">formularz pytań</div>
+            <div class="boczneMenu" id="home" onclick="home()">HOME</div>
+            <div class="boczneMenu" id="zresetuj" onclick="resetuj()">Zresetuj formularz</div>
+        </div> 
     
     <div id="pojemnik" class="glownyKolor">
         <div id="content" class="glownyKolor" style="min-height: 200px;">
@@ -50,16 +52,6 @@
                 <input id="nastepnePytanie" class="klikacze" onclick="quizz()" class="buttony" type="button"
                 value="Losuj pytanie">
             </div>
-        </div>
-        <div id="nav3"class="nav">
-            <div id="boczneNaglowek" class="boczneMenuStale">menu</div>
-            
-            <div class="boczneMenu" id="home" onclick="home()">HOME</div>
-            <div class="boczneMenu" id="zresetuj" onclick="resetuj()">Zresetuj formularz</div>
-        </div>
-        <div id="nav2" class="nav">
-            <div id="boczneNaglowek" class="boczneMenuStale">dodatki</div>
-            <div id="boczneNaglowek" class="boczneMenu" onclick="rozsunDodanieDiva()">formularz pytań</div>
         </div>
     </div>
     <div id="listaPytan">

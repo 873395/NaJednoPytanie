@@ -55,7 +55,7 @@ else
     g3.style.backgroundColor='';
     moznoKlikalnoscPlus=true;
 }
- output.innerHTML=`Elementów: ${iloscDivow}`;
+ output.innerHTML=`Pytań: ${iloscDivow}`;
 }
 
 
@@ -108,8 +108,17 @@ function kreatorElementow() //tworzenie divów
                 odpowiedzi.id=`odpowiedz${q}${a}`;
                 odpowiedzi.className='odpowiedzi';
                 odpowiedzi.addEventListener('click',()=>{klikalnik(`${q}`,`${a}`);},false);
-                odpowiedzi.innerHTML=pytania[numerDoPytan[q]][a];
                 glownyDiv.appendChild(odpowiedzi);
+
+                    let napisDo=document.createElement('div');
+                    napisDo.className='napisaneJest';
+                    napisDo.innerHTML=pytania[numerDoPytan[q]][a];
+                    odpowiedzi.appendChild(napisDo);
+
+                let znaczek=document.createElement('div');
+                znaczek.id=`znaczek${q}${a}`;
+                znaczek.className='znaczek';
+                odpowiedzi.appendChild(znaczek);
             };
         numerPytania++;
         poleNaPytania.appendChild(glownyDiv);
@@ -127,14 +136,14 @@ function kreatorElementow() //tworzenie divów
 function klikalnik(nmrPojemnika,nmrOdpowiedzi)
 {
     if(wyslaneOdpowiedzi)return;
-    const a=document.getElementById(`odpowiedz${nmrPojemnika}${1}`);
-    const b=document.getElementById(`odpowiedz${nmrPojemnika}${2}`);
-    const c=document.getElementById(`odpowiedz${nmrPojemnika}${3}`);
+    const a=document.getElementById(`znaczek${nmrPojemnika}${1}`);
+    const b=document.getElementById(`znaczek${nmrPojemnika}${2}`);
+    const c=document.getElementById(`znaczek${nmrPojemnika}${3}`);
         [a,b,c].forEach(i=>{i.style.border=''});
     
-    const odp=document.getElementById(`odpowiedz${nmrPojemnika}${nmrOdpowiedzi}`);
-    odp.style.borderBottom='3px solid orange';
-        odp.style.borderLeft='3px solid orange';
+    const odp=document.getElementById(`znaczek${nmrPojemnika}${nmrOdpowiedzi}`);
+    const odp2=document.getElementById(`znaczek${nmrPojemnika}${nmrOdpowiedzi}`);
+    odp.style.border='4px solid #824cff';
     tablicaOdpowiedzi[nmrPojemnika]=nmrOdpowiedzi;
 }
 
@@ -149,32 +158,29 @@ function sprawdzanieOdpowiedzi()
     for(let m=0;m<iloscDivow;m++)
     {
         if(tablicaOdpowiedzi[m]==0)continue;
-        const dobra=document.getElementById(`odpowiedz${m}${tablicaOdpowiedzi[m]}`);
+        const dobra=document.getElementById(`znaczek${m}${tablicaOdpowiedzi[m]}`);
             console.warn(tablicaOdpowiedzi);
         let A;
         let D;
             if(pytania[odnosnikPytania[m]][4]=='A'){D=1};
             if(pytania[odnosnikPytania[m]][4]=='B'){D=2};
             if(pytania[odnosnikPytania[m]][4]=='C'){D=3};
-        const poprawna=document.getElementById(`odpowiedz${m}${D}`);
-        poprawna.style.borderLeft='4px solid green';
-        poprawna.style.borderRight='4px solid green';
+        const poprawna=document.getElementById(`znaczek${m}${D}`);
+        poprawna.style.border='4px solid green';
 
              if(tablicaOdpowiedzi[m]==1){A='A'};
              if(tablicaOdpowiedzi[m]==2){A='B'};
              if(tablicaOdpowiedzi[m]==3){A='C'};
              if(pytania[odnosnikPytania[m]][4]==A){
-                dobra.style.borderBottom='2px solid lime';
-                dobra.style.borderLeft='2px solid lime';
+                dobra.style.border='4px solid lime';
                 sumaPunktow++;
              }
              else
              {
-                dobra.style.borderBottom='2px solid red';
-                dobra.style.borderLeft='2px solid red';
+                dobra.style.border='4px solid red';
              }  
     }//koniec
-    opcja2.innerHTML=`Zdobyłeś ${sumaPunktow} / ${iloscDivow}`;
+    nmrPytania.innerHTML=`Zdobyłeś ${sumaPunktow} / ${iloscDivow} punktów`;
     let data2=new Date();
     let godzina2=data2.getHours();
     let minuta2=data2.getMinutes();

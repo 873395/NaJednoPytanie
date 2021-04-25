@@ -48,46 +48,49 @@ img
 
 .glownyDiv
 {
-    border: 0.1px solid orange;
-    background-color: #4b4a4a;
+    background-color: #121420;
     border-radius: 20px;
     margin-top: 5%;
     padding: 1%;
 }
 .odpowiedzi
 {
-    margin-top: 1%;
+    margin-top: 2%;
     padding: 1%;
     padding-left: 2%;
-    border-left: 0.5px solid orange;
-    border-bottom: 0.5px solid orange;
-    background-color:#585858 ;
+    border-left: 0.5px solid #7034ff;
+    border-bottom: 0.5px solid #7034ff;
+    background-color:#22263f ;
     border-radius: 100px;
     text-align: left;
+    display: flex;
 }
 
 .odpowiedzi:hover
 {
-    border-left: 0.5px solid orangered;
-    border-bottom: 0.5px solid orangered;
+    border-left: 2px solid #824cff;
+    border-bottom: 2px solid #824cff;
 }
 
 .pytanie
 {
     font-family: Roboto-Black;
     font-weight: 1000;
-    font-size: 20px;
-    border: 0px solid green;
-    padding:30px;
-    background-color: #3d3d3d;
-    border-radius: 10px;
+    font-size: 30px;
+    border: 1px solid #824cff;
+    padding:50px;
+    background-color: #22263f;
+    border-radius: 0px 0px 20px 20px;
+    margin-bottom: 6%;
 }
 
 .idPytania
 {
-    padding: 1%;
+    border-radius: 20px 20px 0px 0px;
+    padding: 2%;
     text-align: left;
-    font-size: 10px;
+    font-size: 13px;
+    background-color: #7034ff;
 }
 
 #output 
@@ -102,11 +105,11 @@ img
     position: sticky;
     width: 20%;
     height: 40px;
-    background-color: #3d3d3d;
+    background-color: #22263f;
     bottom: 10px;
     border: 0.5px solid black;
-    border-left: 1px solid orange;
-    border-bottom: 1px solid orange;
+    border-left: 2px solid #7034ff;
+    border-bottom: 2px solid #7034ff;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -115,19 +118,17 @@ img
 }
 .latajacyDiv:hover
 {
-    background-color: orange;
-    color: black;
-    
+    background-color: #7034ff;
 }
 
 .koncoweWyniki
 {
     width: 100%;
-    height: 200px;
+    height: 250px;
     position:sticky;
-    background-color: #3d3d3d;
-    border-top: 5px solid orange;
-    border-bottom:5px solid orange;
+    background-color: #22263f;
+    border-top: 5px solid #7034ff;
+    border-bottom:5px solid #7034ff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -138,7 +139,7 @@ img
     text-align: center;
     padding: 10px;
     opacity: 100%;
-    box-shadow: 0px 0px 3000px orange;
+    box-shadow: 0px 0px 3000px #7034ff;
 }
 
 .glowneNapisy
@@ -158,8 +159,8 @@ img
 .dodatkoweGuziki
 {
     position: relative;
-    border: 5px solid orange;
-    background-color: #585858;
+    border: 5px solid #7034ff;
+    background-color: #22263f;
     color: white;
     align-items: center;
     justify-content: center;
@@ -174,8 +175,9 @@ img
 }
 .dodatkoweGuziki:hover
 {
-    border:5px  solid orangered;
-    box-shadow: 0px 0px 5px orange;
+    border:6px  solid #8c5bff;
+    box-shadow: 0px 0px 10px #7c44ff;
+    cursor: pointer;
     opacity: 100%;
 }
 
@@ -187,4 +189,22 @@ img
     background-color: black;
     bottom: 1%;
     opacity: 80%;
+}
+
+.znaczek
+{
+    order: -1;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    border: 5px solid white; 
+}
+.napisaneJest
+{
+    width: 100%;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
 }

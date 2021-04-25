@@ -1,27 +1,26 @@
 .boczneMenu
 {
-    border: 1px solid gray;
-    border-bottom: 1px solid #EE5A24;
-    border-right: 1px solid #EE5A24;
     padding: 5px;
-    margin-bottom: 5px;
-    border-radius: 6px;
-    background-color: #4b4b4b;
-    font-size: 14px;
+    background-color: #1e2136;
+    font-size: 15px;
+    display: flex;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .boczneMenu:hover
 {
-    border-bottom: 1px solid #FFC312;
-    border-right: 1px solid #FFC312;
     cursor: pointer;
+    background-color: #46209e;
 }
 .boczneMenuStale
 {
-    border: 2px solid rgb(31, 31, 31);
-    border-bottom: 2px solid #ff4400;
-    padding: 5px;
-    margin-bottom: 5px;
-    border-radius: 6px;
-    background-color: #4b4b4b;
-    font-weight: 1000;
+    padding: 10px;
+    background-color: #1e2136;
+    font-size: 16px;
+}
+#zegarek
+{
+    font-size: 20px;
 }

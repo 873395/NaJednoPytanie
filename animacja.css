@@ -13,22 +13,3 @@
      0%{left: -100%;}
      100%{left: 0%;}
  } */
-
-#zegarek
-{
-    animation: wrapper 1s ease-in;
-    animation-play-state: paused;
-}
-
-@keyframes wrapper{
-    0%{
-        border-bottom: 1px solid green;
-    }
-
-    50%{
-        border-bottom: 1px solid red;
-    }
-    100%{
-        border-bottom: 1px solid green;
-    }
-}
