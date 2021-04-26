@@ -17,16 +17,9 @@
     <header>quiz "na drugą nóżkę"</header>
     <div id="pasekStanu1" class="pasekStanu">
         <div class="boczneMenu" id="home" onclick="home()">HOME</div>
+        <div class="boczneMenu" id="iloscPytan" onclick="oknoListyPytan()">LICZBA PYTAŃ</div>
         <div class="boczneMenu" id="jednoPytanie" onclick="window.open('index.html','_self')">Jedno pytanie</div>
         <div class="boczneMenu" id="zresetuj" onclick="resetuj()">Zresetuj formularz</div>
-        <div class="boczneMenuStale" id="|">|</div>
-        <div onclick="liczbaPytan('1')" class="boczneMenu" id="g1" type="submit">+</div>
-        <div onclick="liczbaPytan('2')" class="boczneMenu" id="g2" type="submit">-</div>
-        <div onclick="liczbaPytan('3')" class="boczneMenu" id="g3" type="submit">+10</div>
-        <div onclick="liczbaPytan('4')" class="boczneMenu" id="g4" type="submit">-10</div>
-        <div onclick="liczbaPytan('5')" class="boczneMenu" id="g5" type="submit">RESET</div>
-        <div class="boczneMenuStale" id="output">Pytań: 1</div>
-        <div class="boczneMenu" onclick="kreatorElementow()">Losuj</div>
     </div>
 
     <div id="pojemnik" class="glownyKolor">
@@ -51,6 +44,8 @@
     <script src="pulaPytan.js"></script>
     <script src="Napisy.js"></script>
     <script src="animacja.js"></script>
+    <script src="dodatkoweFunkcje.js"></script>
+
 </body>
 
 </html>

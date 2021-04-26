@@ -61,6 +61,7 @@ else
 
 function kreatorElementow() //tworzenie divów
 {
+    blurownik.remove();
     wyslaneOdpowiedzi=false;
     tablicaOdpowiedzi=[];
     odnosnikPytania=[];
@@ -159,12 +160,13 @@ function sprawdzanieOdpowiedzi()
     {
         if(tablicaOdpowiedzi[m]==0)continue;
         const dobra=document.getElementById(`znaczek${m}${tablicaOdpowiedzi[m]}`);
-            console.warn(tablicaOdpowiedzi);
+        console.warn(tablicaOdpowiedzi);
         let A;
         let D;
-            if(pytania[odnosnikPytania[m]][4]=='A'){D=1};
-            if(pytania[odnosnikPytania[m]][4]=='B'){D=2};
-            if(pytania[odnosnikPytania[m]][4]=='C'){D=3};
+        if(pytania[odnosnikPytania[m]][4]=='A'){D=1};
+        if(pytania[odnosnikPytania[m]][4]=='B'){D=2};
+        if(pytania[odnosnikPytania[m]][4]=='C'){D=3};
+        console.log(`znaczek${m}${D}`);
         const poprawna=document.getElementById(`znaczek${m}${D}`);
         poprawna.style.border='4px solid green';
 

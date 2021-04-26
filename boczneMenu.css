@@ -3,7 +3,6 @@
     padding: 5px;
     background-color: #1e2136;
     font-size: 15px;
-    display: flex;
     width: 10%;
     display: flex;
     align-items: center;
@@ -23,4 +22,113 @@
 #zegarek
 {
     font-size: 20px;
+}
+
+.rozsuwaneMenu
+{
+    top: 1px;
+    width: 12%;
+    background-color: #1e2136;
+    position: absolute;
+    border-left: 3px solid #7034ff;
+    border-right: 3px solid #7034ff;
+}
+.dodatkoweOpcje
+{
+    background-color: #1e2136;
+    padding: 20px;
+    border-bottom: 1px solid #4d01ff;
+}
+.dodatkoweOpcje:hover
+{
+    background-color: #46209e;
+}
+
+.oknoListyPytan
+{
+    top: 25%;
+    left: 0%;
+    position:absolute;
+    width: 100%;
+    height: 40%;
+    background-color: #1e2136;
+    border-top:5px solid #4d01ff ;
+    border-bottom: 5px solid #4d01ff ;
+    opacity: 2;
+    padding-left: 5%;
+    padding-ri: 5%;
+}
+#blurownik
+{
+    opacity: 0.9;
+    top: 0%;
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+.pulaGuziki
+{
+    padding: 1%;
+    background-color: #1e2136;
+    border-left: 1px solid #824cff;
+    border-right: 1px solid #824cff;
+    font-size: 20px;
+    width: 100%;
+    height: 13.75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#output
+{
+    text-align: center;
+    font-size: 40px;
+}
+.pulaGuziki:hover
+{
+    background-color: #7c44ff;
+}
+
+#pojemnikNaGuziki
+{
+    display: inline-block;
+    height: 100%;
+    width: 30%;
+}
+
+.listowanieElementow
+{
+    display: inline-block;
+}
+
+#prawyPojemnik
+{
+    font-weight: 1000;
+    padding: 5%;
+    position: absolute;
+    margin-left: 1%;
+    margin-top: 1%;
+    width: 60%;
+    height: 90%;
+}
+
+#usun
+{  
+    left: 1%;
+    top: 1%;
+    position: absolute;
+    font-weight: 1000;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #1e2136;
+    border: 5px solid #7034ff;
+}
+#usun:hover
+{
+    background-color: #7f49fd;
+    cursor: pointer;
 }
