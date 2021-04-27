@@ -140,11 +140,12 @@ function klikalnik(nmrPojemnika,nmrOdpowiedzi)
     const a=document.getElementById(`znaczek${nmrPojemnika}${1}`);
     const b=document.getElementById(`znaczek${nmrPojemnika}${2}`);
     const c=document.getElementById(`znaczek${nmrPojemnika}${3}`);
-        [a,b,c].forEach(i=>{i.style.border=''});
+        [a,b,c].forEach(i=>{i.style.border='';i.style.backgroundColor=''});
     
     const odp=document.getElementById(`znaczek${nmrPojemnika}${nmrOdpowiedzi}`);
     const odp2=document.getElementById(`znaczek${nmrPojemnika}${nmrOdpowiedzi}`);
     odp.style.border='4px solid #824cff';
+    odp.style.backgroundColor='#824cff';
     tablicaOdpowiedzi[nmrPojemnika]=nmrOdpowiedzi;
 }
 
@@ -164,17 +165,20 @@ function sprawdzanieOdpowiedzi()
         if(pytania[odnosnikPytania[m]][4]=='C'){D=3};
         const poprawna=document.getElementById(`znaczek${m}${D}`);
         poprawna.style.border='4px solid green';
+        poprawna.style.backgroundColor='green';
 
              if(tablicaOdpowiedzi[m]==1){A='A'};
              if(tablicaOdpowiedzi[m]==2){A='B'};
              if(tablicaOdpowiedzi[m]==3){A='C'};
              if(pytania[odnosnikPytania[m]][4]==A){
                 dobra.style.border='4px solid lime';
+                dobra.style.backgroundColor='lime';
                 sumaPunktow++;
              }
              else
              {
                 dobra.style.border='4px solid red';
+                dobra.style.backgroundColor='red';
              }  
     }//koniec
     nmrPytania.innerHTML=`Zdobyłeś ${sumaPunktow} / ${iloscDivow} punktów`;
@@ -222,6 +226,7 @@ function koncowyWynik()
     zamknij.innerHTML='X';
     zamknij.addEventListener('click',usuwajElementy);
     koncoweWyniki.appendChild(zamknij);
+    window.scrollTo(0,0);
 }
 
 function usuwajElementy()
