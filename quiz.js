@@ -52,12 +52,10 @@ let zlykolor="#A50000";
 function quizz()
 {
     let indeks=Math.floor(Math.random()*(pytania.length)-1)+1;
-    console.warn(indeks);
     if(indeks==poprzednie)
     {indeks=Math.floor(Math.random()*(pytania.length)-1)+1;
     }
     poprzednie=indeks;
-    console.warn(poprzednie+" i "+indeks);
 
     nmrPytania.innerHTML=`Pytanie: ${indeks+1} z puli ${pytania.length} pytań`;
     TrescPytania.innerHTML=pytania[indeks][0];
@@ -88,7 +86,6 @@ function sprawdzenie(numer)
 
      nastepnePytanie.value="Wylosuj następne";
      if(numer==prawidlowa){
-         console.log(numer+prawidlowa);
          dobre++; 
                     let audioContext = new (window.AudioContext)();
                     let oscillator = audioContext.createOscillator();
@@ -119,7 +116,6 @@ function sprawdzenie(numer)
 
     odpowiedzi=`Punkty ${dobre} / ${calkowite}`;       //Liczenie liczby punktów
     let srednia=dobre/calkowite;
-        console.warn(srednia);
         let zaokraglona=Math.round(srednia*100)/100;
         kolorek.innerHTML=`ŚREDNIA: ${zaokraglona}`;
         if(srednia<=0.5)

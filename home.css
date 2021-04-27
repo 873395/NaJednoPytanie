@@ -1,0 +1,45 @@
+.pojemnikNaObjasnienia
+{
+    font-family: 'Ubuntu Mono', monospace;   
+    font-weight: 100;
+    font-size: 120%;
+    margin: 4%;
+    margin-left: 15%;
+    margin-top: 2%;
+    width: 60%;
+    border-radius: 20px;
+    padding: 2%;
+    background-color: #1e2136;
+}
+
+.elementyWPojemniku
+{
+    display: inline-block;
+    width: 70%;
+}
+
+#lewyPojemnikGuzik
+{
+    margin-left: 1%;
+    width: 25%;
+    font-size: 140%;
+    border-radius: 50px;
+    text-align: center;
+    padding: 1%;
+    border: 6px solid #46209e;
+    background-color: #7034ff;
+}
+#lewyPojemnikGuzik:hover
+{
+    background-color: #8855ff;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+#pojemnikNaObjasnieniaNaglowek
+{
+    padding: 1%;
+    text-align: center;
+    font-size: 180%;
+    font-weight: 700;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>QUIZ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="boczneMenu.css">
+    <link rel="stylesheet" href="suwak.css">
+    <link rel="stylesheet" href="animacja.css">
+    <script src="Napisy.js"></script>
+    <script src="wybory.js"></script>
+    <script src="nawigacja.js"></script>
+    <script src="pulaPytan.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,500;1,700;1,900&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body id="body">
+    <div id="pasekStanu1" class="pasekStanu">
+            <div class="boczneMenu" id="home" onclick="home()">HOME</div>
+            <div id="boczneNaglowek" class="boczneMenu" onclick="rozsunDodanieDiva()">arkusz pytań</div>
+            <div class="boczneMenu" id="zresetuj" onclick="resetuj()">Zresetuj formularz</div>
+            <div class="boczneMenu" id="rozwinMenu"onmouseleave="zwin()" onmouseenter="rozwin()">pytania</div>
+            <div class="boczneMenu" id="zegarek">zegar</div>
+        </div> 
+    
+    <div id="pojemnik" class="glownyKolor">
+        <div id="content" class="glownyKolor" style="min-height: 200px;">
+            <div class="paski">
+                <dib id="opcja2" class="paskiWSrodku">Liczba punktów</dib>
+                <dib id="kolorek" class="paskiWSrodku">Średnia punktów</dib>
+                </div>
+                <div id="nmrPytania"></div>
+                <div id="TrescPytania">Tutaj będzie tresc pytania</div>
+                <div id="odpowiedzi">
+                    <div id="znacznik">
+                        <div class="odpowiedzNMR" id="odpowiedz1"></div>
+                    </div>
+                    <div id="znacznik">
+                    <div class="odpowiedzNMR" id="odpowiedz2"></div>
+                </div>
+                <div id="znacznik">
+                    <div class="odpowiedzNMR" id="odpowiedz3"></div>
+                </div>
+            </div>
+            <div id="wybieracze">
+                <button class="klikacze" id="guuzik1" onclick="sprawdzenie('A')" type="button" value="1">A</button>
+                <button class="klikacze" id="guuzik2" onclick="sprawdzenie('B')" type="button" value="2">B</button>
+                <button class="klikacze" id="guuzik3" onclick="sprawdzenie('C')" type="button" value="3">C</button>
+            </div>
+            <div id="guwyborny">
+                <input id="nastepnePytanie" class="klikacze" onclick="quizz()" class="buttony" type="button"
+                value="Losuj pytanie">
+            </div>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+    <script src="zegar.js"></script>
+    <script src="listaPytan.js"></script>
+    <script src="dodatkoweFunkcje.js"></script>
+    
+</body>
+
+</html>

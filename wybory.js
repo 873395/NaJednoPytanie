@@ -29,7 +29,6 @@ function listaDoPytan()
         rozsunListe.innerText="ZWIŃ LISTĘ";
     }
     
-    console.warn(rozsunienta);
 }
 function listaDoPytan2()
 {

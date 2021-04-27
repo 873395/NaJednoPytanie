@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>QUIZ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="boczneMenu.css">
+    <link rel="stylesheet" href="suwak.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,500;1,700;1,900&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="animacja.css">
+</head>
+
+<body id="body" onload="listaDoPytan()">
+    <div id="pasekStanu1" class="pasekStanu">
+            <div class="boczneMenu" id="home" onclick="home()">HOME</div>
+            <div id="boczneNaglowek" class="boczneMenu" onclick="rozsunDodanieDiva()">formularz pytań</div>
+        </div>                     
+    <div id="listaPytan">
+        <div id="nagloekListyPytan">Lista pytań quizu</div>
+        <div id="ListaNaPytania"></div>
+        <button onclick="listaDoPytan()"  class="klikacze">ROZWIŃ LISTĘ</button>
+        <button onclick="listaDoPytan2()" class="klikacze">Zwiń LISTĘ</button>
+    </div>
+    <script src="quiz.js"></script>
+    <script src="zegar.js"></script>
+    <script src="listaPytan.js"></script>
+    <script src="dodatkoweFunkcje.js"></script>
+    <script src="Napisy.js"></script>
+    <script src="wybory.js"></script>
+    <script src="nawigacja.js"></script>
+    <script src="pulaPytan.js"></script>
+</body>
+
+</html>

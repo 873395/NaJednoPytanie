@@ -18,28 +18,28 @@ function oknoListyPytan()
     let g1=document.createElement('div');
     g1.id='g1';
     g1.className='pulaGuziki';
-    g1.innerHTML='plus';
+    g1.innerHTML='+ 1';
     g1.addEventListener('click',()=>{liczbaPytan('1');},false);
     pojemnikNaGuziki.appendChild(g1);
 
     let g2=document.createElement('div');
     g2.id='g2';
     g2.className='pulaGuziki';
-    g2.innerHTML='minus';
+    g2.innerHTML='- 1';
     g2.addEventListener('click',()=>{liczbaPytan('2');},false);
     pojemnikNaGuziki.appendChild(g2);
 
     let g3=document.createElement('div');
     g3.id='g3';
     g3.className='pulaGuziki';
-    g3.innerHTML='plus 10';
+    g3.innerHTML='+ 10';
     g3.addEventListener('click',()=>{liczbaPytan('3');},false);
     pojemnikNaGuziki.appendChild(g3);
 
     let g4=document.createElement('div');
     g4.id='g4';
     g4.className='pulaGuziki';
-    g4.innerHTML='minus 10';
+    g4.innerHTML='- 10';
     g4.addEventListener('click',()=>{liczbaPytan('4');},false);
     pojemnikNaGuziki.appendChild(g4);
 
@@ -53,7 +53,7 @@ function oknoListyPytan()
     let g6=document.createElement('div');
     g6.id='g5';
     g6.className='pulaGuziki';
-    g6.innerHTML='losuj';
+    g6.innerHTML='Wczytaj pytania';
     g6.addEventListener('click',()=>{kreatorElementow();},false);
     pojemnikNaGuziki.appendChild(g6);
 
@@ -64,7 +64,7 @@ function oknoListyPytan()
 
     let output=document.createElement('div');
     output.id='output';
-    output.innerHTML='Pytanie: 1';
+    output.innerHTML='Pytań: 1';
     output.className='wyjscia';
     prawyPojemnik.appendChild(output);
 
@@ -95,13 +95,13 @@ function rozwin()
        let dodatkowaOpcja=document.createElement('div');
        dodatkowaOpcja.id='dodatkowe';
        dodatkowaOpcja.className='dodatkoweOpcje';
-       dodatkowaOpcja.innerHTML='Opcja 1';
+       dodatkowaOpcja.innerHTML='Wszystkie pytania';
        tloRozsuwane.appendChild(dodatkowaOpcja);
 
        let dodatkowaOpcja2=document.createElement('div');
        dodatkowaOpcja2.id='dodatkowe2';
        dodatkowaOpcja2.className='dodatkoweOpcje';
-       dodatkowaOpcja2.innerHTML='Opcja s';
+       dodatkowaOpcja2.innerHTML='GALERIA ZDJĘĆ';
        tloRozsuwane.appendChild(dodatkowaOpcja2);
        
 }

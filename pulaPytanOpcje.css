@@ -1,20 +1,7 @@
 *{margin: 0px;}
-@font-face {
-    font-family:Roboto-Black ;
-    src: url(Roboto-Black.ttf);
-}
-@font-face {
-    font-family:Roboto-Italic ;
-    src: url(Roboto-Italic.ttf);
-}
-
-@font-face {
-    font-family: Roboto-Bold;
-    src: url(Roboto-Bold.ttf);
-}
 img
 {
-    margin: 2%;
+    margin: 5%;
 }
 
 .sterowanieIloscia
@@ -56,7 +43,7 @@ img
 .odpowiedzi
 {
     margin-top: 2%;
-    padding: 1%;
+    padding: 2%;
     padding-left: 2%;
     border-left: 0.5px solid #7034ff;
     border-bottom: 0.5px solid #7034ff;
@@ -76,7 +63,7 @@ img
 {
     font-family: Roboto-Black;
     font-weight: 1000;
-    font-size: 30px;
+    font-size: 20px;
     border: 1px solid #824cff;
     padding:50px;
     background-color: #22263f;
@@ -104,17 +91,18 @@ img
 {
     position: sticky;
     width: 20%;
-    height: 40px;
-    background-color: #22263f;
-    bottom: 10px;
-    border: 0.5px solid black;
+    height: 50px;
+    background-color: #2c3469;
+    bottom: 20px;
+    border: 1px solid black;
     border-left: 2px solid #7034ff;
     border-bottom: 2px solid #7034ff;
-    border-radius: 20px;
+    border-radius: 15px;
     display: flex;
-    align-items: center;
+    align-items:center;
     justify-content: center;
-    left: 100%;
+    left: 90%;
+    top: 90%;
 }
 .latajacyDiv:hover
 {
@@ -125,7 +113,8 @@ img
 {
     width: 100%;
     height: 250px;
-    position:sticky;
+    position:absolute;
+    bottom: 10%;
     background-color: #22263f;
     border-top: 5px solid #7034ff;
     border-bottom:5px solid #7034ff;
@@ -135,18 +124,16 @@ img
     display: inline-table;
     bottom: 200px;
     top: 5%;
-    font-weight: 1000;
+    font-weight: 900;
     text-align: center;
     padding: 10px;
     opacity: 100%;
-    box-shadow: 0px 0px 3000px #7034ff;
 }
 
 .glowneNapisy
 {
     padding-top: 30px;
     font-size: 30px;
-    font-family: Roboto-black;
     opacity: 100%;
 
 }
@@ -154,7 +141,6 @@ img
 {
     position: relative;
     opacity: 100%;
-
 }
 .dodatkoweGuziki
 {
@@ -175,7 +161,7 @@ img
 }
 .dodatkoweGuziki:hover
 {
-    border:6px  solid #8c5bff;
+    background-color: #8c5bff;
     box-shadow: 0px 0px 10px #7c44ff;
     cursor: pointer;
     opacity: 100%;
@@ -183,12 +169,12 @@ img
 
 .blur
 {
-    position:sticky;
+    position: sticky;
     width: 100%;
     height: 100%;
     background-color: black;
     bottom: 1%;
-    opacity: 80%;
+    opacity: 90%;
 }
 
 .znaczek

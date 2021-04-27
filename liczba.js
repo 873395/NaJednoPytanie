@@ -12,9 +12,7 @@ function losowanko() {
     // tworzenie losowego indeksu pomiędzy 0 i n - 1
     var r = Math.floor(Math.random()*n);
     // wybieramy element z losowego miejsca
-    console.warn(numbers[r]);
     pytanka.push('a');
-    console.warn(pytanka);
     // przeniesienia ostatniego elementu do miejsca z którego wzięliśmy
     numbers[r] = numbers[n - 1];
     //zmniejszamy n

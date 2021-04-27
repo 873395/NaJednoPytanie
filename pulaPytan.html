@@ -10,16 +10,17 @@
     <link rel="stylesheet" href="suwak.css">
     <link rel="stylesheet" href="pulaPytanOpcje.css">
     <link rel="stylesheet" href="animacja.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,500;1,700;1,900&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body id="body">
     <div id="wrapper"></div>
-    <header>quiz "na drugą nóżkę"</header>
     <div id="pasekStanu1" class="pasekStanu">
         <div class="boczneMenu" id="home" onclick="home()">HOME</div>
         <div class="boczneMenu" id="iloscPytan" onclick="oknoListyPytan()">LICZBA PYTAŃ</div>
-        <div class="boczneMenu" id="jednoPytanie" onclick="window.open('index.html','_self')">Jedno pytanie</div>
+        <div class="boczneMenu" id="jednoPytanie" onclick="window.open('jednoPytanie.html','_self')">Jedno pytanie</div>
         <div class="boczneMenu" id="zresetuj" onclick="resetuj()">Zresetuj formularz</div>
+        <div class="boczneMenu" id="rozwinMenu"onmouseleave="zwin()" onmouseenter="rozwin()">pytania</div>
     </div>
 
     <div id="pojemnik" class="glownyKolor">

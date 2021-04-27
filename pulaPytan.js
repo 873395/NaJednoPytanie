@@ -131,7 +131,7 @@ function kreatorElementow() //tworzenie divów
             divSprawdzaj.innerHTML="sprawdź";
             divSprawdzaj.id='sprawdz';
             divSprawdzaj.addEventListener('click',sprawdzanieOdpowiedzi);
-            poleNaPytania.appendChild(divSprawdzaj);
+            document.body.appendChild(divSprawdzaj);
 } //znacznik konca funkcji
 
 function klikalnik(nmrPojemnika,nmrOdpowiedzi)
@@ -152,21 +152,16 @@ function klikalnik(nmrPojemnika,nmrOdpowiedzi)
 function sprawdzanieOdpowiedzi()
 {
     wyslaneOdpowiedzi=true;
-    console.warn(numerDoPytan);
-    console.warn(odnosnikPytania);
-    console.warn(tablicaOdpowiedzi);
 
     for(let m=0;m<iloscDivow;m++)
     {
         if(tablicaOdpowiedzi[m]==0)continue;
         const dobra=document.getElementById(`znaczek${m}${tablicaOdpowiedzi[m]}`);
-        console.warn(tablicaOdpowiedzi);
         let A;
         let D;
         if(pytania[odnosnikPytania[m]][4]=='A'){D=1};
         if(pytania[odnosnikPytania[m]][4]=='B'){D=2};
         if(pytania[odnosnikPytania[m]][4]=='C'){D=3};
-        console.log(`znaczek${m}${D}`);
         const poprawna=document.getElementById(`znaczek${m}${D}`);
         poprawna.style.border='4px solid green';
 
@@ -227,7 +222,6 @@ function koncowyWynik()
     zamknij.innerHTML='X';
     zamknij.addEventListener('click',usuwajElementy);
     koncoweWyniki.appendChild(zamknij);
-
 }
 
 function usuwajElementy()
