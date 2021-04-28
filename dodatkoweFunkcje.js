@@ -15,6 +15,7 @@ function oknoListyPytan()
     pojemnikNaGuziki.className='listowanieElementow';
     glowneOkno.appendChild(pojemnikNaGuziki);
     
+    
     let g1=document.createElement('div');
     g1.id='g1';
     g1.className='pulaGuziki';
@@ -51,9 +52,9 @@ function oknoListyPytan()
     pojemnikNaGuziki.appendChild(g5);
 
     let g6=document.createElement('div');
-    g6.id='g5';
+    g6.id='g6';
     g6.className='pulaGuziki';
-    g6.innerHTML='Wczytaj pytania';
+    g6.innerHTML='rozpocznij quiz';
     g6.addEventListener('click',()=>{kreatorElementow();},false);
     pojemnikNaGuziki.appendChild(g6);
 
@@ -61,6 +62,11 @@ function oknoListyPytan()
     prawyPojemnik.id='prawyPojemnik';
     prawyPojemnik.className='listowanieElementow';
     glowneOkno.appendChild(prawyPojemnik);
+
+    let objasnienia=document.createElement('div');
+    objasnienia.id='objasnienie';
+    objasnienia.innerHTML='Wskazówka: aby zwiększyć liczbę pytań, użyj przycisków po lewej stronie. Aby rozpocząć quiz kliknij "rozpocznij quiz"';
+    prawyPojemnik.appendChild(objasnienia);
 
     let output=document.createElement('div');
     output.id='output';
@@ -73,6 +79,7 @@ function oknoListyPytan()
     usun.addEventListener('click',dilejt);
     usun.innerHTML='X';
     prawyPojemnik.appendChild(usun);
+    
 }
 function dilejt()
 {

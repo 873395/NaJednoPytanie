@@ -181,7 +181,7 @@ function sprawdzanieOdpowiedzi()
                 dobra.style.backgroundColor='red';
              }  
     }//koniec
-    nmrPytania.innerHTML=`Zdobyłeś ${sumaPunktow} / ${iloscDivow} punktów`;
+    nmrPytania.innerHTML=`Punkty ${sumaPunktow} / ${iloscDivow}`;
     let data2=new Date();
     let godzina2=data2.getHours();
     let minuta2=data2.getMinutes();

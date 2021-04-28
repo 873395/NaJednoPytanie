@@ -132,3 +132,12 @@
     background-color: #7f49fd;
     cursor: pointer;
 }
+
+#objasnienie
+{
+    bottom: 35%;
+    left: 0%;
+    position: absolute;
+    width: 100%;
+    padding-left: 10%;    
+}

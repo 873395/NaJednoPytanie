@@ -16,12 +16,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,500;1,700;1,900&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-<body id="body">
+<body id="body" onload="quizz()">
     <div id="pasekStanu1" class="pasekStanu">
             <div class="boczneMenu" id="home" onclick="home()">HOME</div>
-            <div id="boczneNaglowek" class="boczneMenu" onclick="rozsunDodanieDiva()">arkusz pytań</div>
             <div class="boczneMenu" id="zresetuj" onclick="resetuj()">Zresetuj formularz</div>
-            <div class="boczneMenu" id="rozwinMenu"onmouseleave="zwin()" onmouseenter="rozwin()">pytania</div>
             <div class="boczneMenu" id="zegarek">zegar</div>
         </div> 
     
@@ -32,16 +30,16 @@
                 <dib id="kolorek" class="paskiWSrodku">Średnia punktów</dib>
                 </div>
                 <div id="nmrPytania"></div>
-                <div id="TrescPytania">Tutaj będzie tresc pytania</div>
+                <div id="TrescPytania">Błąd wczytywania pytań</div>
                 <div id="odpowiedzi">
                     <div id="znacznik">
-                        <div class="odpowiedzNMR" id="odpowiedz1"></div>
+                        <div class="odpowiedzNMR" id="odpowiedz1">A: błąd</div>
                     </div>
                     <div id="znacznik">
-                    <div class="odpowiedzNMR" id="odpowiedz2"></div>
+                    <div class="odpowiedzNMR" id="odpowiedz2">B: błąd</div>
                 </div>
                 <div id="znacznik">
-                    <div class="odpowiedzNMR" id="odpowiedz3"></div>
+                    <div class="odpowiedzNMR" id="odpowiedz3">C: błąd</div>
                 </div>
             </div>
             <div id="wybieracze">
@@ -51,7 +49,7 @@
             </div>
             <div id="guwyborny">
                 <input id="nastepnePytanie" class="klikacze" onclick="quizz()" class="buttony" type="button"
-                value="Losuj pytanie">
+                value="następne pytanie">
             </div>
         </div>
     </div>

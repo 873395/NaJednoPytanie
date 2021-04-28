@@ -13,24 +13,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,500;1,700;1,900&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-<body id="body">
+<body id="body" onload="oknoListyPytan()">
     <div id="wrapper"></div>
     <div id="pasekStanu1" class="pasekStanu">
         <div class="boczneMenu" id="home" onclick="home()">HOME</div>
-        <div class="boczneMenu" id="iloscPytan" onclick="oknoListyPytan()">LICZBA PYTAŃ</div>
-        <div class="boczneMenu" id="jednoPytanie" onclick="window.open('jednoPytanie.html','_self')">Jedno pytanie</div>
-        <div class="boczneMenu" id="zresetuj" onclick="resetuj()">Zresetuj formularz</div>
-        <div class="boczneMenu" id="rozwinMenu"onmouseleave="zwin()" onmouseenter="rozwin()">pytania</div>
+        <div class="boczneMenu" id="iloscPytan" onclick="oknoListyPytan()">rozpocznij ponownie</div>
+        <div class="boczneMenu" id="zegarek">zegar</div>
+        <div class="boczneMenu" id="nmrPytania"></div>
     </div>
 
     <div id="pojemnik" class="glownyKolor">
         <div id="content" class="glownyKolor" style="min-height: 200px;">
-            <div class="paski">
-                <dib id="zegarek" class="paskiWSrodku wrapper">Godzina</dib>
-            </div>
-            <div id="nmrPytania">
-                Powodzenia ;-)
-            </div>
             <div id="poleNaPytania"></div>
         </div>
     </div>
