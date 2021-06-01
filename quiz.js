@@ -82,26 +82,13 @@ function sprawdzenie(numer)
      if(numer=='A'){guuzik1.style.borderBottom=`3px solid ${zlykolor}`;} //czerwone
      if(numer=='B'){guuzik2.style.borderBottom=`3px solid ${zlykolor}`;} //czerwone
      if(numer=='C'){guuzik3.style.borderBottom=`3px solid ${zlykolor}`;} //czerwone
+     dzwiekOdpowiedziNiedobrej();
      pierwsze=false; //przerwanie
 
      nastepnePytanie.value="Wylosuj następne";
      if(numer==prawidlowa){
-         dobre++; 
-                    let audioContext = new (window.AudioContext)();
-                    let oscillator = audioContext.createOscillator();
-                    let gainNode = audioContext.createGain();
-                    oscillator.connect(gainNode);
-                    gainNode.connect(audioContext.destination);
-
-
-                    let now = audioContext.currentTime;
-                    gainNode.gain.setValueAtTime(0.5, now);
-                    gainNode.gain.exponentialRampToValueAtTime(0.1, now + 0.5);
-                      oscillator.start(now);
-                      oscillator.stop(now + 0.5);
-
-                    oscillator.type = "triangle";
-                        oscillator.frequency.setValueAtTime(600, audioContext.currentTime + 0.05);                       //dobra odpowiedź
+        dzwiekOdpowiedzi();  
+         dobre++;        
     }
 
      if (prawidlowa=="A") {guuzik1.style.borderBottom=`3px solid ${dobrykolor}`; //zielony kolor

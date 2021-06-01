@@ -13,13 +13,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,500;1,700;1,900&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-<body id="body" onload="oknoListyPytan()">
+<body id="body" onload="oknoListyPytan(),ehs()">
     <div id="wrapper"></div>
     <div id="pasekStanu1" class="pasekStanu">
         <div class="boczneMenu" id="home" onclick="home()">HOME</div>
         <div class="boczneMenu" id="iloscPytan" onclick="oknoListyPytan()">rozpocznij ponownie</div>
         <div class="boczneMenu" id="zegarek">zegar</div>
         <div class="boczneMenu" id="nmrPytania"></div>
+        <div class="boczneMenu" id="sluchaj" onclick="wlaczone()">Dźwięk</div>
     </div>
 
     <div id="pojemnik" class="glownyKolor">
@@ -39,6 +40,7 @@
     <script src="Napisy.js"></script>
     <script src="animacja.js"></script>
     <script src="dodatkoweFunkcje.js"></script>
+    <script src="dzwiek.js"></script>
 
 </body>
 

@@ -219,6 +219,7 @@ function koncowyWynik()
     ${czasowa}
     `
     koncoweWyniki.appendChild(napisPunkty);
+    dzwiekKoniecZadania();
 
     let zamknij=document.createElement('button');
     zamknij.className='dodatkoweGuziki';
